@@ -1,0 +1,27 @@
+{
+  "model_name": "DenseNet121_Pneumonia_Detection",
+  "trained_on": "Google Colab with GPU",
+  "input_shape": [
+    256,
+    256,
+    3
+  ],
+  "output_classes": [
+    "NORMAL",
+    "PNEUMONIA"
+  ],
+  "preprocessing": {
+    "resize": [
+      256,
+      256
+    ],
+    "normalize": "0-1 scaling",
+    "channels": "RGB"
+  },
+  "performance": {
+    "final_train_accuracy": 0.8995398879051208,
+    "final_val_accuracy": 0.8157051205635071,
+    "epochs_trained": 17
+  },
+  "tensorflow_version": "2.19.0"
+}

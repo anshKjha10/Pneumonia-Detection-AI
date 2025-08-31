@@ -1,0 +1,11 @@
+tensorflow==2.16.1
+numpy<2
+streamlit>=1.28.0
+pandas
+langchain-groq
+langchain-huggingface
+opencv-python-headless
+pillow
+matplotlib
+python-dotenv
+protobuf<4.0dev,>=3.20.3
