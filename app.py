@@ -65,7 +65,10 @@ def load_model():
     
     if os.path.exists(model_path):
         try:
-            loaded_model = keras.models.load_model(model_path, compile=False)
+            # For TensorFlow 2.20.0 compatibility
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore")
+                loaded_model = keras.models.load_model(model_path, compile=False)
             st.success("Model loaded successfully!")
             return loaded_model
         except Exception as e:
