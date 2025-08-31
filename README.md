@@ -2,10 +2,6 @@
 
 An AI-powered chest X-ray analysis tool that predicts pneumonia and provides detailed explanations of the findings. **Ready for Streamlit Cloud deployment!**
 
-## 🌟 Live Demo
-**Deploy this app instantly on Streamlit Cloud!** 
-
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://share.streamlit.io](https://pneumonia-detection-ai-glrdwwxg2aquq7qx68appyb.streamlit.app/))
 
 ## Features
 
