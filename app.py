@@ -175,7 +175,7 @@ def main():
             with col1:
                 st.subheader("Uploaded X-ray Image")
                 display_image = Image.open(image)
-                st.image(display_image, caption="Uploaded X-ray Image", use_container_width=True)
+                st.image(display_image, caption="Uploaded X-ray Image", width="stretch")
                 
                 st.write(f"**Image size:** {display_image.size}")
                 st.write(f"**Image mode:** {display_image.mode}")
