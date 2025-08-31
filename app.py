@@ -2,13 +2,11 @@ import streamlit as st
 import pandas as pd
 import os
 from langchain_groq import ChatGroq
-from langchain_huggingface import HuggingFaceEmbeddings
 import tensorflow as tf
 from tensorflow import keras
 import numpy as np
 import cv2
 from PIL import Image
-import matplotlib.pyplot as plt
 
 # Suppress TensorFlow warnings for better UX
 import warnings
@@ -21,11 +19,8 @@ load_dotenv()
 # Handle environment variables for both local and cloud deployment
 try:
     groq_api_key = os.environ.get('GROQ_API_KEY') or st.secrets.get("GROQ_API_KEY")
-    hf_token = os.environ.get('HF_TOKEN') or st.secrets.get("HF_TOKEN")
-    os.environ['HF_TOKEN'] = hf_token if hf_token else ""
 except:
     groq_api_key = os.environ.get('GROQ_API_KEY', '')
-    hf_token = os.environ.get('HF_TOKEN', '')
 
 if not groq_api_key:
     st.error("GROQ API key not found. Please set GROQ_API_KEY in your environment or secrets.")
