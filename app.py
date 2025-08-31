@@ -10,6 +10,11 @@ import cv2
 from PIL import Image
 import matplotlib.pyplot as plt
 
+# Suppress TensorFlow warnings for better UX
+import warnings
+warnings.filterwarnings('ignore', category=UserWarning)
+tf.get_logger().setLevel('ERROR')
+
 from dotenv import load_dotenv
 load_dotenv()
 
